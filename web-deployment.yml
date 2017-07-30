@@ -15,11 +15,11 @@ spec:
         cloud.google.com/gke-nodepool: default-pool
       containers:
         - name: web
-          image: asia.gcr.io/gcpusetest/hello-k8s/app:beta3
+          image: asia.gcr.io/gcpusetest/hello-k8s/app:beta4
           ports:
             - containerPort: 80
           resources:
             requests:
-              cpu: 200m
+              cpu: 165m
             limits:
-              cpu: 200m
+              cpu: 165m
