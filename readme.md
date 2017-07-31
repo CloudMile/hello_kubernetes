@@ -27,7 +27,7 @@ $ gcloud config set compute/zone asia-east1-a
 建立 clusters
 
 ```shell
-gcloud container clusters create hello-k8s --enable-cloud-logging --enable-cloud-monitoring --machine-type g1-small --num-nodes 2
+gcloud container clusters create hello-k8s --enable-cloud-logging --enable-cloud-monitoring --machine-type g1-small --num-nodes 1
 ```
 
 指定 `kubectl` 專案
@@ -36,10 +36,10 @@ gcloud container clusters create hello-k8s --enable-cloud-logging --enable-cloud
 $ gcloud container clusters get-credentials hello-k8s
 ```
 
-紀錄 user
+修改 `THIS_EVENT` 為參與的活動
 
 ```shell
-$ sed -i '' -e  "s/YOUR_NAME/$USER/g" ./html/index.html
+$ sed -e  "s/THIS_EVENT/<THIS_EVENT>/g" ./html/index.html
 ```
 
 建立要丟上去的 docker hub
@@ -116,3 +116,10 @@ $ kubectl apply -f ./web-service.yml
 
 ## 打開瀏覽器，輸入 YOUR_IP
 
+## 刪除專案 (on Shell)
+
+`YOUR_PROJECT_ID` 可以從 `資訊主頁 (DASHBOARD)`, `專案資訊 (Project info)` 得知
+
+```
+$ gcloud projects delete <YOUR_PROJECT_ID>
+```
