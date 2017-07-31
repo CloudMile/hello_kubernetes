@@ -36,8 +36,10 @@ gcloud container clusters create hello-k8s --enable-cloud-logging --enable-cloud
 $ gcloud container clusters get-credentials hello-k8s
 ```
 
+紀錄 user
+
 ```shell
-$ sed -ie "s/YOUR_NAME/$USER/g" ./html/index.html
+$ sed -i '' -e  "s/YOUR_NAME/$USER/g" ./html/index.html
 ```
 
 建立要丟上去的 docker hub
@@ -83,7 +85,7 @@ $ kubectl apply -f ./web-deployment.yml
 $ gcloud compute addresses create hello-k8s --region=asia-east1
 ```
 
-記錄改該 IP
+記錄該 IP
 
 ```shell
 $ gcloud compute addresses list
@@ -108,9 +110,9 @@ $ kubectl create -f ./web-service.yml
 
 更新 service
 
-```
+```shell
 $ kubectl apply -f ./web-service.yml
 ```
 
-## 打開瀏覽器，並輸入 YOUR_IP
+## 打開瀏覽器，輸入 YOUR_IP
 
