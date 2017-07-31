@@ -7,7 +7,7 @@ metadata:
 spec:
   type: LoadBalancer
   # use your external IP here
-  loadBalancerIP: YOUR_IP
+  loadBalancerIP: <EXTENAL_IP>
   ports:
     - port: 80
       targetPort: 80
