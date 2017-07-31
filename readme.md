@@ -116,3 +116,10 @@ $ kubectl apply -f ./web-service.yml
 
 ## 打開瀏覽器，輸入 YOUR_IP
 
+## 刪除專案 (on Shell)
+
+`YOUR_PROJECT_ID` 可以從 `資訊主頁 (DASHBOARD)`, `專案資訊 (Project info)` 得知
+
+```
+$ gcloud projects delete <YOUR_PROJECT_ID>
+```
