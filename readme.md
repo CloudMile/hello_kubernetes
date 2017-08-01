@@ -70,7 +70,7 @@ $ gcloud docker -- push asia.gcr.io/$PROJECT_ID/hello-k8s/app:v1
 建立 clusters
 
 ```shell
-$ gcloud container clusters create hello-k8s --enable-cloud-logging --enable-cloud-monitoring --machine-type g1-small --num-nodes 1
+$ gcloud container clusters create hello-k8s --machine-type g1-small --num-nodes 1
 ```
 
 指定 `kubectl` 專案
