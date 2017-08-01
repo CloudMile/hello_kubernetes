@@ -47,7 +47,7 @@ $ export PROJECT_ID=$(gcloud config list --format 'value(core.project)')
 
 ## 建置容器應用 (Container Image)
 
-修改顯示的活動名稱，將以下指令的 `CHANGE_THIS_EVENT` 改成對應的活動名稱，例如 `COSCOP2017`
+修改顯示的活動名稱，將以下指令的 `CHANGE_THIS_EVENT` 改成對應的活動名稱，例如 `COSCUP2017`
 
 ```shell
 $ sed -ie "s/<THIS_EVENT>/CHANGE_THIS_EVENT/g" ./html/index.html
